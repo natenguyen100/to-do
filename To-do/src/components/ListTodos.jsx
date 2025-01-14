@@ -8,7 +8,7 @@ const ListToDos = () => {
 
     const deleteTodo = async (id) => {
         try {
-            await fetch(`http://localhost:3000/todos/${id}`, {
+            await fetch(`https://to-do-backend-xla2.onrender.com/todos/${id}`, {
                 method: "DELETE"
             });
 
@@ -20,7 +20,7 @@ const ListToDos = () => {
     
     const getTodos = async () => {
         try {
-            const response = await fetch("http://localhost:3000/todos")
+            const response = await fetch("https://to-do-backend-xla2.onrender.com/todos")
             const jsonData = await response.json()
 
             setTodos(jsonData)
